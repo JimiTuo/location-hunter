@@ -1,0 +1,76 @@
+<osm-script output='json' output-config='' timeout='60'>
+  <union>
+    <query type="way">
+      <has-kv k="highway" v="track"/>
+      <bbox-query n="62.63" e="29.7" w="29.65" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="residential"/>
+      <bbox-query n="62.63" e="29.7" w="29.65" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="footway"/>
+      <bbox-query n="62.63" e="29.7" w="29.65" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="path"/>
+      <bbox-query n="62.63" e="29.7" w="29.65" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="cycleway"/>
+      <bbox-query n="62.63" e="29.7" w="29.65" s="62.58"/>
+    </query>
+  </union>
+  <union>
+    <item/>
+  	<recurse from='_' into='_' type='down'/>
+  </union>
+  <print/>
+</osm-script>
+
+<osm-script output='json' output-config='' timeout='60'>
+  <union>
+    <query type="way">
+      <has-kv k="highway" v="track"/>
+      <bbox-query n="62.63" e="29.73" w="29.68" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="residential"/>
+      <bbox-query n="62.63" e="29.73" w="29.68" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="footway"/>
+      <bbox-query n="62.63" e="29.73" w="29.68" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="path"/>
+      <bbox-query n="62.63" e="29.73" w="29.68" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v="cycleway"/>
+      <bbox-query n="62.63" e="29.73" w="29.68" s="62.58"/>
+    </query>
+  </union>
+  <union>
+    <item/>
+  	<recurse from='_' into='_' type='down'/>
+  </union>
+  <print/>
+</osm-script>
+
+<osm-script output='json' output-config='' timeout='60'>
+  <union>
+  	<query type="way">
+      <has-kv k="foot" v='designated'/>
+      <bbox-query n="62.63" e="29.83" w="29.68" s="62.58"/>
+    </query>
+    <query type="way">
+      <has-kv k="highway" v='residential'/>
+      <bbox-query n="62.63" e="29.83" w="29.68" s="62.58"/>
+    </query>
+  </union>
+  <union>
+  	<recurse from='_' into='_' type='down'/>
+  </union>
+  <print/>
+</osm-script>
